@@ -1,13 +1,13 @@
 "use client"
 
-import { Copy, ExternalLink, MessageCircle } from "lucide-react"
+import { Copy, ExternalLink, MessageCircle, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Analytics } from "@vercel/analytics/react"
 
 export default function HomePage() {
-  const donationAddress = "4tjZZXb613SpuMyUhQn8KHKQ84JRFgZsVoY7xcVZiHr2"
+  const donationAddress = "9MZbhrDNr5DJ3ZwvJSCHDUyrvcX7KkEVVeFve9xexQGd"
   const tokenAddress = "C4WfgtSvVQ3MhLq5WcaDEC3abFPcxxRbzAANEV9nbonk"
 
   const copyToClipboard = (text: string) => {
@@ -34,19 +34,26 @@ export default function HomePage() {
             <p className="text-xl text-gray-300">Something amazing is being built here.</p>
           </div>
 
-          {/* Telegram Community */}
+          {/* Social Media */}
           <div className="bg-white/10 backdrop-blur-sm border-white/20 rounded-lg p-6 mb-8">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <MessageCircle className="w-6 h-6 text-blue-400" />
-              <h3 className="text-xl font-semibold text-white">Join Our Community</h3>
+              <h3 className="text-xl font-semibold text-white">Follow & Connect</h3>
             </div>
-            <p className="text-gray-300 mb-4">Stay updated and connect with the community</p>
-            <Button asChild className="bg-blue-500 hover:bg-blue-600 text-white border-0">
-              <a href="https://t.me/abreuofficial" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Join Telegram
-              </a>
-            </Button>
+            <p className="text-gray-300 mb-6">Stay updated and connect with our community</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild className="bg-blue-500 hover:bg-blue-600 text-white border-0">
+                <a href="https://t.me/abreuofficial" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Join Telegram
+                </a>
+              </Button>
+              <Button asChild variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
+                <a href="https://x.com/abreufoundation" target="_blank" rel="noopener noreferrer">
+                  <Twitter className="w-4 h-4 mr-2" />
+                  Follow on X
+                </a>
+              </Button>
+            </div>
           </div>
 
           {/* Cards Container */}
@@ -57,7 +64,7 @@ export default function HomePage() {
                 <CardTitle className="text-white flex items-center gap-2">
                   Donations
                   <Badge variant="secondary" className="bg-green-500/20 text-green-300 border-green-500/30">
-                    raff.sol
+                    abreufoundation.sol
                   </Badge>
                 </CardTitle>
                 <CardDescription className="text-gray-300">Support the foundation</CardDescription>
@@ -146,6 +153,15 @@ export default function HomePage() {
               className="text-blue-400 hover:text-blue-300 transition-colors"
             >
               metasal.xyz
+            </a>
+            {" • "}
+            <a
+              href="https://github.com/metasal1/abreu-foundation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              GitHub
             </a>
           </p>
         </div>
